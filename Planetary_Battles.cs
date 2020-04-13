@@ -12,8 +12,8 @@ namespace DesignPatterns.GangOfFour.Creational.AbstractFactory
 	///
 	///	We have:
 	///		IPlanetFactory ---> 				The AbstractFactory interface that contains two
-	///											methods (CreateFederationMember() and 
-	///									 		CreateNonFederationMember())
+	///								methods (CreateFederationMember() and 
+	///								CreateNonFederationMember())
 	///
 	///		IFederationMember--> 				AbstractProductA interface
 	///		INonFederationMember--> 			AbstractProductB interface
@@ -22,18 +22,23 @@ namespace DesignPatterns.GangOfFour.Creational.AbstractFactory
 	///
 	///		class Romulan, Borg -->				Concrete implementations of the INonFederationMember interface
 	///
-	///		class EarthPlanet, VulcanPlanet --> Concrete implementations of the IPlanetFactory interface
+	///		class EarthPlanet, VulcanPlanet --> 		Concrete implementations of the IPlanetFactory interface
 	///
-	///		IGalaxyQuadrant -->					The 'Client' interface that contains the method used to run the simulation			
+	///		IGalaxyQuadrant -->				The 'Client' interface that contains the method used to run 
+	//								the simulation			
 	///
-	///		AlphaQuadrant<T> --->				Concrete implementation of the IGalaxyQuadrant interface.  Creates an IPlanetFactory
-	///											of type 'T' and uses the IPlanetFactory local instance to create concrete IFederationMember
-	///											and INonFederationMember instances.  AlphaQuadrant<T> also implements the RunSimulation()
-	///											method defined in the interface IGalaxyQuadrant.  This is the AbstractFactory pattern in 
-	///											action where all concrete instances are created dynamically.  The AbstractFactory pattern
-	///											is also highly extensible, since new planets, quadrants, Federation, and NonFedration members
-	///											can be implemented later without the need to redefine the interfaces.
-	///		
+	///		AlphaQuadrant<T> --->				Concrete implementation of the IGalaxyQuadrant interface.  
+	///								Creates an IPlanetFactoryof type 'T' and uses the IPlanetFactory 
+	///								local instance to create concrete IFederationMember and 
+	///								INonFederationMember instances.  AlphaQuadrant<T> 
+	///								also implements the RunSimulation() method defined in the 
+	///								interface IGalaxyQuadrant.  This is the AbstractFactory pattern 
+	///								in action where all concrete instances are created dynamically. 
+	///								The AbstractFactory pattern is also highly extensible, since new planets, 
+	///								quadrants, Federation, and NonFedration members can be 
+	///								implemented later without the need to redefine the interfaces.
+	///								
+	///										
     /// </summary>
     class Program
     {
