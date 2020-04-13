@@ -28,14 +28,14 @@ namespace DesignPatterns.GangOfFour.Creational.AbstractFactory
 	//								the simulation			
 	///
 	///		AlphaQuadrant<T> --->				Concrete implementation of the IGalaxyQuadrant interface.  
-	///								Creates an IPlanetFactoryof type 'T' and uses the IPlanetFactory 
+	///								Creates an IPlanetFactory of type 'T' and uses the IPlanetFactory 
 	///								local instance to create concrete IFederationMember and 
 	///								INonFederationMember instances.  AlphaQuadrant<T> 
 	///								also implements the RunSimulation() method defined in the 
 	///								interface IGalaxyQuadrant.  This is the AbstractFactory pattern 
 	///								in action where all concrete instances are created dynamically. 
-	///								The AbstractFactory pattern is also highly extensible, since new planets, 
-	///								quadrants, Federation, and NonFedration members can be 
+	///								The AbstractFactory pattern is also highly extensible, since new 
+	///								planets, quadrants, Federation, and NonFedration members can be 								
 	///								implemented later without the need to redefine the interfaces.
 	///								
 	///										
