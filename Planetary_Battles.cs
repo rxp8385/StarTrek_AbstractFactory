@@ -6,6 +6,34 @@ namespace DesignPatterns.GangOfFour.Creational.AbstractFactory
     /// Abstract Factory Design Pattern.
     /// Definition: Provide an interface for creating families of related 
     /// or dependent objects without specifying their concrete classes.
+	///
+	///	This example uses the Abstract Factory pattern to create different
+	///	planets and entities in the Star Trek universe...
+	///
+	///	We have:
+	///		IPlanetFactory ---> 				The AbstractFactory interface that contains two
+	///											methods (CreateFederationMember() and 
+	///									 		CreateNonFederationMember())
+	///
+	///		IFederationMember--> 				AbstractProductA interface
+	///		INonFederationMember--> 			AbstractProductB interface
+	///
+	///		class Vulcan, Human -->				Concrete implementations of the IFederationMember interface
+	///
+	///		class Romulan, Borg -->				Concrete implementations of the INonFederationMember interface
+	///
+	///		class EarthPlanet, VulcanPlanet --> Concrete implementations of the IPlanetFactory interface
+	///
+	///		IGalaxyQuadrant -->					The 'Client' interface that contains the method used to run the simulation			
+	///
+	///		AlphaQuadrant<T> --->				Concrete implementation of the IGalaxyQuadrant interface.  Creates an IPlanetFactory
+	///											of type 'T' and uses the IPlanetFactory local instance to create concrete IFederationMember
+	///											and INonFederationMember instances.  AlphaQuadrant<T> also implements the RunSimulation()
+	///											method defined in the interface IGalaxyQuadrant.  This is the AbstractFactory pattern in 
+	///											action where all concrete instances are created dynamically.  The AbstractFactory pattern
+	///											is also highly extensible, since new planets, quadrants, Federation, and NonFedration members
+	///											can be implemented later without the need to redefine the interfaces.
+	///		
     /// </summary>
     class Program
     {
